@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import NormalizeIgnored from 'normalize.css';
+import StylesIgnored from '../styles/main.css';
 
-var Main = React.createClass({
-	render: function() {
-		return (
-			<div>
-				{/* Header */}
-				{this.props.children}
-				{/* Footer */}
-			</div>
-		)
-	}
-});
+const Main = (props) => (
+	<div>
+		{/* Header */}
+		{props.children}
+		{/* Footer */}
+	</div>
+);
 
-module.exports = Main;
+Main.propTypes = {
+    children: PropTypes.object.isRequired
+};
+
+export default Main;

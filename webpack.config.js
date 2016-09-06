@@ -22,10 +22,23 @@ module.exports = {
 				query: {
         			presets: ['react', 'es2015']
       			}
+			},
+			{
+				test: /\.css$/,
+				loader: 'style-loader!css-loader!postcss-loader'
+			},
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'url-loader?limit=8192'
 			}
-		]
+		],
+		noParse: [/moment.js/]
+	},
+	postcss: function () {
+	    return [
+	        require('postcss-cssnext')
+	    ];
 	},
 	plugins: [copyHTMLConfig],
-	devtool: 'source-map',
 	debug: true
 };
