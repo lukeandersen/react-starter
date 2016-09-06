@@ -1,16 +1,13 @@
-var copyHTML = require('html-webpack-plugin');
-var copyHTMLConfig = new copyHTML({
-	template: __dirname + '/app/index.html',
-	filename: 'index.html',
-	inject: 'body'
-});
+const path = require('path');
+const cssNext = require('postcss-cssnext');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: [
 		'./app/index.js'
 	],
 	output: {
-		path: __dirname + '/dist',
+		path: path.join(__dirname, '/dist'),
 		filename: 'index_bundle.js'
 	},
 	module: {
@@ -20,8 +17,11 @@ module.exports = {
 				exclude: /node_modules/,
 				loader: 'babel',
 				query: {
-        			presets: ['react', 'es2015']
-      			}
+					presets: [
+						'react',
+						'es2015'
+					]
+				}
 			},
 			{
 				test: /\.css$/,
@@ -34,11 +34,18 @@ module.exports = {
 		],
 		noParse: [/moment.js/]
 	},
-	postcss: function () {
-	    return [
-	        require('postcss-cssnext')
-	    ];
+	postcss() {
+		return [
+			cssNext
+		];
 	},
-	plugins: [copyHTMLConfig],
+	plugins: [
+		new CopyWebpackPlugin([
+            { from: './app/index.html' },
+			{ from: './app/favicon.ico' },
+			{ from: './app/assets', to: 'assets' }
+		])
+	],
+	devtool: 'cheap-module-eval-source-map',
 	debug: true
 };

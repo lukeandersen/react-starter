@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DemoImage from '../assets/apple-touch-icon.png';
+import DemoImage from '../assets/images/apple-touch-icon.png';
 
 class Home extends Component {
 	constructor(props) {
