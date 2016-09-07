@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && webpack --progress -p",
+    "build": "npm run lint && npm run clean && webpack --progress -p",
     "start": "webpack-dev-server --no-info --progress --hot --inline --port 9000 --open",
     "clean": "rimraf ./dist && mkdir dist",
     "lint": "eslint ./app --ext .js --env browser --color"
