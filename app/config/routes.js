@@ -4,11 +4,11 @@ import Main from '../components/main';
 import Home from '../components/home';
 
 const routes = (
-	<Router history={browserHistory}>
-		<Route path="/" component={Main}>
-			<IndexRoute component={Home} />
-		</Route>
-	</Router>
+    <Router history={browserHistory}>
+        <Route path="/" component={Main}>
+            <IndexRoute component={Home} />
+        </Route>
+    </Router>
 );
 
 module.exports = routes;

@@ -9,7 +9,7 @@ module.exports = {
     'rules': {
         'comma-dangle': 0,
         'indent': [0, 4],
-        'react/jsx-indent': [2, 0],
+        'react/jsx-indent': [2, 4],
         'max-len': [1, 100, 4, {
             'ignorePattern': '\\s*<' // Ignore length in JSX with HTML content
         }],
