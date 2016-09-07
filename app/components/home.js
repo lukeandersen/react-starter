@@ -5,6 +5,7 @@ class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { name: 'Bob' };
+		this.handleInput = this.handleInput.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
 	}
 
@@ -12,11 +13,13 @@ class Home extends Component {
 		// Do something when loaded
 	}
 
-	handleSearch(event) {
-		event.preventDefault();
-		if (this.refs.search.value !== null) {
-			this.setState({ name: this.refs.search.value });
-		}
+	handleInput(e) {
+		this.setState({ name: e.target.value });
+	}
+
+	handleSearch(e) {
+		e.preventDefault();
+		// Do something with form data in state
 	}
 
 	render() {
@@ -30,7 +33,7 @@ class Home extends Component {
 
 				{/* Example form with action */}
 				<form className="search" onSubmit={this.handleSearch}>
-					<input ref="search" type="search" placeholder="Search" />
+					<input onChange={this.handleInput} type="search" placeholder="Search" />
 					<button type="submit">Search</button>
 				</form>
 
