@@ -16,8 +16,13 @@ module.exports = {
         'import/no-extraneous-dependencies': 0,
         'import/prefer-default-export': 0,
         'react/jsx-filename-extension': 0,
+        'react/require-extension': 0,
         'no-console': 0,
         'react/no-string-refs': 1,
         'no-unused-vars': [2, { 'varsIgnorePattern': '[iI]gnored' }]
+    },
+    'env': {
+        'browser': true,
+        'node': true
     }
 };

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DemoImage from '../assets/images/apple-touch-icon.png';
 
 class Home extends Component {
     constructor(props) {
@@ -37,9 +36,8 @@ class Home extends Component {
                     <button type="submit">Search</button>
                 </form>
 
-                {/* Example image with file-loader */}
                 <br />
-                <img src={DemoImage} alt="Black box" />
+                <img src="/assets/images/apple-touch-icon.png" alt="Black box" />
             </div>
         );
     }
