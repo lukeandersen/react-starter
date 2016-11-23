@@ -3,10 +3,12 @@ const cssNext = require('postcss-cssnext');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	entry: ['./app/index.js'],
+	entry: {
+		app: './app/index.js'
+	},
 	output: {
 		path: path.join(__dirname, '/dist'),
-		filename: 'index_bundle.js'
+		filename: 'bundle.js'
 	},
 	module: {
 		loaders: [{
@@ -36,6 +38,6 @@ module.exports = {
 			{ from: './app/assets', to: 'assets' }
 		])
 	],
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'source-map',
 	debug: true
 };
