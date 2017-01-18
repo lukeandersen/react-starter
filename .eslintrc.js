@@ -19,7 +19,9 @@ module.exports = {
         'react/require-extension': 0,
         'no-console': 0,
         'react/no-string-refs': 1,
-        'no-unused-vars': [2, { 'varsIgnorePattern': '[iI]gnored' }]
+        'no-unused-vars': [2, { 'varsIgnorePattern': '[iI]gnored' }],
+        'no-underscore-dangle': 0,  // Allow dangling underscores so that we can use _id.
+        "no-param-reassign": 0
     },
     'env': {
         'browser': true,
