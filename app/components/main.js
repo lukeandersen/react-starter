@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
-import NormalizeIgnored from 'normalize.css';
 import StylesIgnored from '../styles/main.css';
+import Navbar from './navbar.js';
+import Footer from './footer.js';
 
 const Main = (props) => (
     <div>
-        {/* Header */}
+        <Navbar />
         {props.children}
-        {/* Footer */}
+        <Footer />
     </div>
 );
 

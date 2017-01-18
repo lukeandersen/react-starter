@@ -38,6 +38,6 @@ module.exports = {
 			{ from: './app/assets', to: 'assets' }
 		])
 	],
-	devtool: 'cheap-module-eval-source-map',
+	devtool: 'source-map',
 	debug: true
 };

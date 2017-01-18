@@ -26,8 +26,6 @@ class Home extends Component {
 
         return (
             <div className="text-center">
-                <h1>React Starter <small>Client</small></h1>
-
                 <h2>Name: {name}</h2>
 
                 {/* Example form with action */}

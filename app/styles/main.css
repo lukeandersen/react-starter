@@ -1,4 +1,5 @@
 /* Project uses CSSNEXT (CSS4) - http://cssnext.io/features/ via postcss */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css';
 
 :root {
 	--primary: dodgerblue;
@@ -11,12 +12,12 @@
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: helvetica, sans-seif;
+	font-family: helvetica, sans-serif;
 	font-size: 100%;
 }
 
 body {
-    font-family: helvetica, sans-seif;
+    font-family: helvetica, sans-serif;
 	font-size: 16px;
 }
 
@@ -27,6 +28,23 @@ h1 {
 		color: gray(150);
 	}
 }
+
+
+/* Navbar */
+.nav-inline {
+	& a {
+		display: inline-block;
+		padding: .5rem;
+	}
+}
+
+
+/* Forms */
+input[disabled] {
+	cursor: not-allowed;
+	opacity: .5;
+}
+
 
 /* Helpers */
 .clearfix {
@@ -41,11 +59,6 @@ h1 {
     text-align: center;
 }
 
-.muted {
+.text-muted {
     opacity: .7;
-}
-
-input[disabled] {
-	cursor: not-allowed;
-	opacity: .5;
 }
