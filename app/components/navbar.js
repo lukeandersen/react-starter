@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => (
     <div>
-        <h1>brand.</h1>
+        <h1><Link to="/">brand.</Link></h1>
         <nav className="nav-inline">
-            <a href="">About</a>
-            <a href="">More</a>
-            <a href="">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="about">About</Link>
         </nav>
     </div>
 );

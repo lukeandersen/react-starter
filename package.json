@@ -14,13 +14,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "0.14.0",
+    "axios": "0.15.3",
     "classnames": "2.2.5",
-    "dotenv": "^2.0.0",
-    "normalize.css": "4.2.0",
-    "react": "15.3.1",
-    "react-dom": "15.3.1",
-    "react-router": "2.7.0"
+    "dotenv": "4.0.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-router": "3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.7.0",
