@@ -18,24 +18,23 @@ class Home extends Component {
 
     handleSearch(e) {
         e.preventDefault();
-        // Do something with form data in state
+        this.setState({ name: e.target.value });
     }
 
     render() {
         const { name } = this.state;
 
         return (
-            <div className="text-center">
+            <div className="container text-center">
                 <h2>Name: {name}</h2>
 
-                {/* Example form with action */}
                 <form className="search" onSubmit={this.handleSearch}>
                     <input onChange={this.handleInput} type="search" placeholder="Search" />
-                    <button type="submit">Search</button>
+                    <button type="submit" className="btn">Search</button>
                 </form>
 
-                <br />
-                <img src="/assets/images/apple-touch-icon.png" alt="Black box" />
+                <div className="bg-test" />
+                <img src="assets/apple-icon.png" width="100" alt="Black box" />
             </div>
         );
     }

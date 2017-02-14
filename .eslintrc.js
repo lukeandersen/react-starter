@@ -1,10 +1,10 @@
 module.exports = {
-    "extends": "airbnb",
-    "installedESLint": true,
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
+    'extends': 'airbnb',
+    'installedESLint': true,
+    'plugins': [
+        'react',
+        'jsx-a11y',
+        'import'
     ],
     'rules': {
         'comma-dangle': 0,
@@ -21,7 +21,8 @@ module.exports = {
         'react/no-string-refs': 1,
         'no-unused-vars': [2, { 'varsIgnorePattern': '[iI]gnored' }],
         'no-underscore-dangle': 0,  // Allow dangling underscores so that we can use _id.
-        "no-param-reassign": 0
+        'no-param-reassign': 0,
+        'react/forbid-prop-types': 0
     },
     'env': {
         'browser': true,

@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import StylesIgnored from '../styles/main.css';
-import Navbar from './navbar.js';
-import Footer from './footer.js';
+import Navbar from './navbar';
+import Footer from './footer';
 
-const Main = (props) => (
+const Main = props => (
     <div>
         <Navbar />
         {props.children}

@@ -1,7 +1,7 @@
 import ReactDom from 'react-dom';
-import routes from './config/routes';
+import Routes from './config/routes';
 
 ReactDom.render(
-	routes,
-	document.getElementById('app')
+    Routes,
+    document.getElementById('app')
 );

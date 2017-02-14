@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -8,8 +9,7 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, './dist'),
-        publicPath: 'http://localhost:9000/'
+        path: path.resolve(__dirname, './dist')
     },
     module: {
         rules: [{
@@ -22,7 +22,10 @@ module.exports = {
             }
         }, {
             test: /\.css$/,
-            loader: ['style-loader', 'css-loader?importLoaders=1&sourceMap', 'postcss-loader']
+            use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader?importLoaders=1', 'postcss-loader']
+            })
         }, {
             test: /\.(png|jpg|jpeg|gif|svg)$/,
             loader: 'file-loader?limit=8192&name=assets/[name].[ext]?[hash]'
@@ -34,8 +37,9 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: './app/favicon.ico' },
-            { from: './app/assets', to: 'assets' }
-        ])
-    ],
-    devtool: 'eval'
+            { from: './app/assets', to: 'assets' },
+            { from: './server.js' }
+        ]),
+        new ExtractTextPlugin('main.css')
+    ]
 };

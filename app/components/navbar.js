@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Navbar = () => (
-    <div>
-        <h1><Link to="/">brand.</Link></h1>
-        <nav className="nav-inline">
+    <div className="container">
+        <h1>brand.</h1>
+        <nav className="nav">
             <Link to="/">Home</Link>
             <Link to="about">About</Link>
         </nav>

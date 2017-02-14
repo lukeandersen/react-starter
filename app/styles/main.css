@@ -1,64 +1,10 @@
 /* Project uses CSSNEXT (CSS4) - http://cssnext.io/features/ via postcss */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css';
+@import 'normalize.css';
 
-:root {
-	--primary: dodgerblue;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-html, body {
-	width: 100%;
-	height: 100%;
-	font-family: helvetica, sans-serif;
-	font-size: 100%;
-}
-
-body {
-    font-family: helvetica, sans-serif;
-	font-size: 16px;
-}
-
-h1 {
-	color: var(--primary);
-
-	& small {
-		color: gray(150);
-	}
-}
-
-
-/* Navbar */
-.nav-inline {
-	& a {
-		display: inline-block;
-		padding: .5rem;
-	}
-}
-
-
-/* Forms */
-input[disabled] {
-	cursor: not-allowed;
-	opacity: .5;
-}
-
-
-/* Helpers */
-.clearfix {
-    overflow: hidden;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-muted {
-    opacity: .7;
-}
+@import '/components/variables.css';
+@import '/components/base.css';
+@import '/components/type.css';
+@import '/components/navbar.css';
+@import '/components/buttons.css';
+@import '/components/forms.css';
+@import '/components/helpers.css';

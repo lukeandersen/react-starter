@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Navbar = () => (
-    <div>
+    <div className="container">
         <p>&copy; Some website</p>
     </div>
 );
