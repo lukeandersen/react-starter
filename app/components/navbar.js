@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => (
     <div className="container">
@@ -9,6 +9,6 @@ const Navbar = () => (
             <Link to="about">About</Link>
         </nav>
     </div>
-);
+)
 
-export default Navbar;
+export default Navbar

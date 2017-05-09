@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Home extends Component {
     constructor(props) {
-        super(props);
-        this.state = { name: 'Bob' };
-        this.handleInput = this.handleInput.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
+        super(props)
+        this.state = { name: 'Bob' }
+        this.handleInput = this.handleInput.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
     }
 
     componentDidMount() {
@@ -13,16 +13,16 @@ class Home extends Component {
     }
 
     handleInput(e) {
-        this.setState({ name: e.target.value });
+        this.setState({ name: e.target.value })
     }
 
     handleSearch(e) {
-        e.preventDefault();
-        this.setState({ name: e.target.value });
+        e.preventDefault()
+        this.setState({ name: e.target.value })
     }
 
     render() {
-        const { name } = this.state;
+        const { name } = this.state
 
         return (
             <div className="container text-center">
@@ -34,10 +34,10 @@ class Home extends Component {
                 </form>
 
                 <div className="bg-test" />
-                <img src="assets/apple-icon.png" width="100" alt="Black box" />
+                <img src="assets/apple-icon.png" width="100" alt="apple icon" />
             </div>
-        );
+        )
     }
 }
 
-export default Home;
+export default Home
