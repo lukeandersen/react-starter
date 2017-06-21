@@ -1,4 +1,9 @@
 /* Navbar */
+.navbar {
+	& h1 {
+		color: dodgerblue;
+	}
+}
 
 .nav {
 	& a {
