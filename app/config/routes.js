@@ -1,13 +1,23 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
+import ReactGA from 'react-ga'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Home from '../views/home'
 import About from '../views/about'
 import StylesIgnored from '../styles/main.css'
 
+ReactGA.initialize('UA-00000000-0')
+
+const history = createHistory()
+history.listen((location) => {
+    ReactGA.set({ page: location.pathname })
+    ReactGA.pageview(location.pathname)
+})
+
 const Routes = (
-    <Router>
+    <Router history={history}>
         <div>
             <Navbar />
             <Route path="/" exact component={Home} />
