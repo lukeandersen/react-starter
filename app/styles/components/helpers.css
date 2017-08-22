@@ -1,16 +1,34 @@
 /* Helpers */
-.clearfix {
-    overflow: hidden;
-}
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
 
-.text-right {
-    text-align: right;
-}
+.left { float: left; }
+.right { float: right; }
 
-.text-center {
-    text-align: center;
-}
+.hidden { display: none; }
+.inline { display: inline-block; }
+.block { display: block; }
 
-.text-muted {
-    opacity: .7;
-}
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-muted { opacity: .7; }
+
+.m-b-0 { margin-bottom: 0; }
+.m-b-1 { margin-bottom: 1rem; }
+.m-b-2 { margin-bottom: 2rem; }
+.m-b-3 { margin-bottom: 3rem; }
+.m-b-4 { margin-bottom: 4rem; }
+
+.m-t-0 { margin-top: 0; }
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
+
