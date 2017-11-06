@@ -6,6 +6,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Home from '../views/home'
 import About from '../views/about'
+import ScrollTop from '../components/scrollTop'
 import StylesIgnored from '../styles/main.css'
 
 ReactGA.initialize('UA-00000000-0')
@@ -23,6 +24,7 @@ const Routes = (
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Footer />
+            <ScrollTop />
         </div>
     </Router>
 )

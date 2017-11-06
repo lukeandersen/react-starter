@@ -118,7 +118,13 @@
       "no-underscore-dangle": 0,
       "no-param-reassign": 0,
       "react/forbid-prop-types": 0,
-      "jsx-a11y/img-has-alt": 0
+      "jsx-a11y/img-has-alt": 0,
+      "jsx-a11y/anchor-is-valid": [
+          "error", {
+              "components": [ "Link" ],
+              "specialLink": [ "to" ]
+          }
+      ]
     }
   }
 }
