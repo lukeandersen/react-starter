@@ -5,26 +5,33 @@ button {
 	background: transparent;
 	outline: 0;
 	cursor: pointer;
+
+	&[disabled] {
+		cursor: default;
+	}
 }
 
 .btn {
 	display: inline-block;
-	border: 1px solid var(--primary);
-	border-radius: 3px;
-	background: var(--primary);
-	color: white;
-	padding: .75rem 1.5rem;
-	font-size: 1rem;
+	border: 1px solid var(--gray);
+	border-radius: 100px;
+	background: white;
+	color: #bababa;
+	padding: .5rem 2.125rem;
+	margin-bottom: .5rem;
+	font-size: 0.875rem;
+	font-weight: 400;
 	cursor: pointer;
 	text-decoration: none;
+	font-family: var(--brand-font);
 
 	&:hover {
-		opacity: .75;
+		opacity: .5;
 	}
 
 	&.btn-sm {
-		padding: .5rem 1rem;
-		font-size: 0.875rem;
+		padding: .425rem 1.5rem;
+		font-size: 0.725rem;
 	}
 
 	&.btn-lg {
@@ -35,6 +42,22 @@ button {
 	&[disabled] {
 		opacity: .4;
 	}
+
+	& + .btn {
+		margin-left: 1rem;
+	}
+}
+
+.btn-primary {
+	border: 1px solid var(--primary);
+	background: var(--primary);
+	color: white;
+}
+
+.btn-secondary {
+	border: 1px solid var(--primary);
+	color: var(--primary);
+	background: white;
 }
 
 .btn-block {

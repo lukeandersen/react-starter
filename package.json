@@ -18,6 +18,7 @@
     "axios": "0.17.0",
     "classnames": "2.2.5",
     "express": "4.16.2",
+    "flexboxgrid": "6.3.1",
     "normalize.css": "7.0.0",
     "prop-types": "15.6.0",
     "react": "16.0.0",
@@ -119,11 +120,26 @@
       "no-param-reassign": 0,
       "react/forbid-prop-types": 0,
       "jsx-a11y/img-has-alt": 0,
-      "jsx-a11y/anchor-is-valid": [
-          "error", {
-              "components": [ "Link" ],
-              "specialLink": [ "to" ]
+      "jsx-a11y/label-has-for": [
+        2,
+        {
+          "required": {
+            "every": [
+              "id"
+            ]
           }
+        }
+      ],
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "to"
+          ]
+        }
       ]
     }
   }

@@ -1,0 +1,42 @@
+.alert {
+	border: 1px solid #333;
+	border-radius: 5px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	position: relative;
+
+	& > p {
+		margin: 0;
+	}
+
+	&.alert-success {
+		border-color: var(--success);
+		color: var(--success);
+
+		& .alert-badge {
+			background-color: var(--success);
+		}
+	}
+
+	&.alert-danger {
+		border-color: var(--danger);
+		color: var(--danger);
+
+		& .alert-badge {
+			background-color: var(--danger);
+		}
+	}
+
+	& .alert-badge {
+		background: #000;
+		color: white;
+		width: 25px;
+		height: 25px;
+		border-radius: 50px;
+		position: absolute;
+		top: -13px;
+		left: -13px;
+		text-align: center;
+		font-size: 1rem;
+	}
+}

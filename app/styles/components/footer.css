@@ -1,0 +1,14 @@
+.footer {
+	background: var(--gray-light);
+	padding: .5rem;
+	margin-top: 2rem;
+    font-family: var(--font-name);
+
+	& p {
+		opacity: .3;
+	}
+
+    & strong {
+        font-weight: 500;
+    }
+}

@@ -1,5 +1,11 @@
 /* Variables */
 
 :root {
-	--primary: dodgerblue;
+	--font-color: #4a4a4a;
+	--font-name: 'Quicksand';
+	--primary: #3333FF;
+	--gray: #C4C4C4;
+	--gray-light: #f1f1f1;
+	--danger: #D31335;
+	--success: #7FA15A;
 }

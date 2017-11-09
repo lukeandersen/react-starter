@@ -1,7 +1,10 @@
 /* Navbar */
 .navbar {
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+
 	& h1 {
-		color: dodgerblue;
+		color: var(--primary);
 	}
 }
 

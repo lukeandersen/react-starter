@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker:300,400,500,700');
+
 * {
 	box-sizing: border-box;
 }
@@ -5,14 +7,34 @@
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: helvetica, sans-serif;
 	font-size: 100%;
 }
 
 body {
-    font-family: helvetica, sans-serif;
-	font-size: 16px;
-    color: #333;
+    font-family: 'Open Sans', helvetica, sans-serif;
+	font-size: 14px;
+    color: #4A4A4A;
+	line-height: 1.5;
+	border-top: 5px solid var(--primary);
+	font-weight: 300;
+}
+
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--gray-light);
+    margin: 2rem 0;
+    padding: 0;
+	clear: both;
+}
+
+a {
+	color: var(--primary);
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 #app {
@@ -21,15 +43,19 @@ body {
 
 .container {
 	max-width: 78.125em;
+	width: auto; /* Reset flexbox-grid's container class */
 	margin: 0 auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
 
-	&.container-md {
+	/* Give widescreens some more space */
+	@media (width >= 78.125em) {
+		max-width: 90em;
+	}
+
+	&.container-sm {
 		max-width: 43.75em;
 	}
 
-	&.container-lg {
+	&.container-md {
 		max-width: 61.5em;
 	}
 }
@@ -43,4 +69,11 @@ img {
     background-size: cover;
 	width: 100px;
 	height: 100px;
+}
+
+.card {
+	background: var(--gray-light);
+	border-radius: 5px;
+	padding: 1.5rem;
+	border-top: 5px solid var(--primary)
 }

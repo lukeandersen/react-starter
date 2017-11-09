@@ -1,8 +1,27 @@
 /* Forms */
+::-webkit-input-placeholder { color: gray(175); }
+::-moz-placeholder { color: gray(175); }
+:-ms-input-placeholder { color: gray(175); }
 
-label {
+.form-group {
+	margin-bottom: 1rem;
+}
+
+label, .label {
 	display: block;
 	margin-bottom: .5rem;
+	font-size: 1.125rem;
+	font-weight: 300;
+
+	& + .label-extra {
+		margin-top: -0.25rem;
+	}
+
+}
+
+.label-extra {
+	font-size: .875rem;
+	opacity: .75;
 }
 
 fieldset {
@@ -17,19 +36,186 @@ fieldset {
 input, select, textarea {
 	width: 100%;
 	background: white;
-	border: 1px solid color(black alpha(30%));
-	border-radius: 5px;
+	border: 1px solid color(var(--gray) alpha(50%));
+	border-radius: 4px;
 	padding: .75rem 1rem;
 	margin-bottom: .5rem;
-	color: gray;
+	color: var(--font-color);
+	font-weight: 300;
 
 	&:focus {
 		outline: 0;
-		border-color: dodgerblue;
+		border-color: var(--gray);
 	}
 
     &[disabled] {
     	cursor: not-allowed;
     	opacity: .5;
     }
+}
+
+.form-checkbox {
+	display: flex;
+	align-items: flex-start;
+
+	& input {
+		width: 1.75rem;
+		font-size: 2rem;
+		margin-top: .4rem;
+	}
+}
+
+.form-radio {
+	display: flex;
+	align-items: flex-start;
+
+	& input {
+		width: 1.75rem;
+		margin-top: .1rem;
+	}
+
+	& .label-extra {
+		flex: 1;
+	}
+}
+
+.help-text {
+	margin-bottom: 1rem;
+	font-size: 90%;
+}
+
+/* Validation and error states */
+.danger {
+	color: var(--danger);
+}
+
+.success {
+	color: var(--success);
+}
+
+.danger-group {
+	& input {
+		border-color: var(--danger);
+	}
+	& .help-text {
+		color: var(--danger);
+	}
+}
+
+/* Custom select - Icons created at flaticon.com and color set at #999 */
+select {
+	background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTUwOS4xMjEsMTI1Ljk2NmMtMy44MzgtMy44MzgtMTAuMDU1LTMuODM4LTEzLjg5MywwTDI1Ni4wMDUsMzY1LjE5NEwxNi43NzEsMTI1Ljk2NmMtMy44MzgtMy44MzgtMTAuMDU1LTMuODM4LTEzLjg5MywwICAgIGMtMy44MzgsMy44MzgtMy44MzgsMTAuMDU1LDAsMTMuODkzbDI0Ni4xOCwyNDYuMTc1YzEuODQyLDEuODQyLDQuMzM3LDIuODc4LDYuOTQ3LDIuODc4YzIuNjEsMCw1LjEwNC0xLjAzNiw2Ljk0Ni0yLjg3OCAgICBsMjQ2LjE3LTI0Ni4xNzVDNTEyLjk1OSwxMzYuMDIxLDUxMi45NTksMTI5LjgwNCw1MDkuMTIxLDEyNS45NjZ6IiBmaWxsPSIjOTk5OTk5Ii8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==");
+	background-size: 1rem;
+	background-position: calc(100% - 1rem) center;
+	background-repeat: no-repeat;
+	box-shadow: none;
+	appearance: none;
+}
+
+/* Custom search - Icons created at flaticon.com and color set at #999 */
+input[type=search] {
+	background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUyLjk2NiA1Mi45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUyLjk2NiA1Mi45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPHBhdGggZD0iTTUxLjcwNCw1MS4yNzNMMzYuODQ1LDM1LjgyYzMuNzktMy44MDEsNi4xMzgtOS4wNDEsNi4xMzgtMTQuODJjMC0xMS41OC05LjQyLTIxLTIxLTIxcy0yMSw5LjQyLTIxLDIxczkuNDIsMjEsMjEsMjEgIGM1LjA4MywwLDkuNzQ4LTEuODE3LDEzLjM4NC00LjgzMmwxNC44OTUsMTUuNDkxYzAuMTk2LDAuMjA1LDAuNDU4LDAuMzA3LDAuNzIxLDAuMzA3YzAuMjUsMCwwLjQ5OS0wLjA5MywwLjY5My0wLjI3OSAgQzUyLjA3NCw1Mi4zMDQsNTIuMDg2LDUxLjY3MSw1MS43MDQsNTEuMjczeiBNMjEuOTgzLDQwYy0xMC40NzcsMC0xOS04LjUyMy0xOS0xOXM4LjUyMy0xOSwxOS0xOXMxOSw4LjUyMywxOSwxOSAgUzMyLjQ1OSw0MCwyMS45ODMsNDB6IiBmaWxsPSIjOTk5OTk5Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=");
+	background-size: 1rem;
+	background-position: calc(100% - 1rem) center;
+	background-repeat: no-repeat;
+	box-shadow: none;
+	appearance: none;
+}
+
+/* Custom range slider */
+input[type=range] {
+	padding: 0;
+	border: 0;
+	margin: 1.75rem 0 1rem;
+	appearance: none !important;
+    background: var(--gray-light);
+    height: .75rem;
+    width: 100%;
+    outline: 0;
+	border-radius: 50px;
+	cursor: pointer;
+	position: relative;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&::-webkit-slider-thumb {
+		appearance: none !important;
+		background: var(--primary);
+		border-radius: 50%;
+		border: 1px solid var(--primary);
+		height: 1.5rem;
+	    width: 1.5rem;
+	}
+
+	&::-moz-range-thumb {
+		appearance: none !important;
+		background: var(--primary);
+		border-radius: 50%;
+		border: 1px solid var(--primary);
+		height: 1.5rem;
+	    width: 1.5rem;
+	}
+
+	&::-ms-thumb {
+		appearance: none !important;
+		background: white;
+		border-radius: 50%;
+		border: 1px solid var(--gray-light);
+		height: 1.5rem;
+	    width: 1.5rem;
+	}
+
+	&::-moz-range-track {
+		background: var(--gray-light);
+		height: 1rem;
+	    width: 100%;
+	    outline: 0;
+		border-radius: 50px;
+		cursor: pointer;
+	}
+
+	&::-ms-track {
+		background: var(--gray-light);
+		height: 1rem;
+	    width: 100%;
+	    outline: 0;
+		border-radius: 50px;
+		cursor: pointer;
+	}
+
+	&::-moz-range-progress {
+		background: var(--primary);
+		height: 1rem;
+		border-radius: 50px;
+	}
+
+	&::-ms-fill-lower {
+		background: var(--primary);
+		height: 1rem;
+		border-radius: 50px;
+	}
+}
+
+.range-slider {
+	position: relative;
+
+	&:before {
+		content: "$" attr(min) "";
+		position: absolute;
+		top: -1.5rem;
+		left: 0;
+		font-size: 12px;
+		opacity: .5;
+	}
+
+	&:after {
+		content: "$" attr(max) "";
+		position: absolute;
+		top: -1.5rem;
+		right: 0;
+		font-size: 12px;
+		opacity: .5;
+	}
 }
