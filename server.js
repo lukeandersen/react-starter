@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 9001
 const app = express()
 
 // serve static assets normally

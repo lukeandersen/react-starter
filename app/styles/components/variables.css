@@ -2,8 +2,8 @@
 
 :root {
 	--font-color: #4a4a4a;
-	--font-name: 'Quicksand';
-	--primary: #3333FF;
+	--font-name: 'Source Sans Pro', 'Open sans', sans-serif;
+	--primary: #5a1ba9;
 	--gray: #C4C4C4;
 	--gray-light: #f1f1f1;
 	--danger: #D31335;

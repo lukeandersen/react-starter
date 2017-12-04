@@ -12,6 +12,13 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/'
     },
+    resolve: {
+        alias: {
+            Helpers: path.resolve(__dirname, './app/helpers/'),
+            Views: path.resolve(__dirname, './app/views/'),
+            Components: path.resolve(__dirname, './app/components/')
+        }
+    },
     module: {
         rules: [{
             test: /\.(js|jsx)$/,

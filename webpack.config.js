@@ -9,7 +9,14 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
-        publicPath: 'http://localhost:9000/'
+        publicPath: '/'
+    },
+    resolve: {
+        alias: {
+            Helpers: path.resolve(__dirname, './app/helpers/'),
+            Views: path.resolve(__dirname, './app/views/'),
+            Components: path.resolve(__dirname, './app/components/')
+        }
     },
     module: {
         rules: [{
