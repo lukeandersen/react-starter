@@ -2,7 +2,7 @@
 
 :root {
 	--font-color: #4a4a4a;
-	--font-name: 'Source Sans Pro', 'Open sans', sans-serif;
+	--font-name: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--primary: #5a1ba9;
 	--gray: #C4C4C4;
 	--gray-light: #f1f1f1;

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700');
-
 * {
 	box-sizing: border-box;
 }
@@ -11,7 +9,7 @@ html, body {
 }
 
 body {
-    font-family: 'Open Sans', helvetica, sans-serif;
+    font-family: var(--font-name);
 	font-size: 14px;
     color: #4A4A4A;
 	line-height: 1.5;

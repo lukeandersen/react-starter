@@ -3,6 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    mode: 'development',
     entry: {
         app: './app/index.js'
     },
@@ -24,8 +25,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             options: {
-                // plugins: ['lodash'],
-                presets: ['react', 'es2015']
+                presets: ['react', 'es2015', 'stage-2']
             }
         }, {
             test: /\.css$/,
@@ -40,7 +40,6 @@ module.exports = {
             template: './app/index.ejs'
         }),
         new CopyWebpackPlugin([
-            { from: './app/favicon.ico' },
             { from: './app/assets', to: 'assets' }
         ])
     ],
