@@ -1,5 +1,5 @@
 import ReactDom from 'react-dom'
-import Routes from './config/routes'
+import Routes from 'Config/routes'
 
 ReactDom.render(
     Routes,

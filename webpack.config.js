@@ -1,6 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
     mode: 'development',
@@ -16,7 +17,8 @@ module.exports = {
         alias: {
             Helpers: path.resolve(__dirname, './app/helpers/'),
             Views: path.resolve(__dirname, './app/views/'),
-            Components: path.resolve(__dirname, './app/components/')
+            Components: path.resolve(__dirname, './app/components/'),
+            Config: path.resolve(__dirname, './app/config/')
         }
     },
     module: {
@@ -38,7 +40,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: './app/assets', to: 'assets' }
-        ])
+        ]),
+        new webpack.HotModuleReplacementPlugin()
     ],
     devtool: 'eval'
 }
