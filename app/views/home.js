@@ -12,36 +12,57 @@ class Home extends Component {
         return (
             <div className="container row">
                 <div className="col-xs-12 col-md-8">
-
                     <h1 className="section-title">Style guide</h1>
-                    <p>{name} ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>
+                        {name} ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
                     <hr />
 
                     <h1>Heading one</h1>
                     <h2>Heading two</h2>
                     <h3>Heading three</h3>
                     <h4>Heading four</h4>
-                    <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit, sed do eiusmod <em>tempor incididunt</em> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <a href="#link">voluptate velit esse</a> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, <strong>consectetur adipisicing</strong> elit, sed do eiusmod <em>tempor incididunt</em> ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in <a href="#link">voluptate velit esse</a> cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
                     <hr />
 
                     <h3>Buttons</h3>
-                    <button className="btn">Default</button>
-                    <button className="btn btn-primary">Primary</button>
-                    <button className="btn btn-secondary">Secondary</button>
-                    <br /><br />
-                    <button className="btn btn-default btn-sm">Small</button>
+                    <button className="btn" type="button">
+                        Default
+                    </button>
+                    <button className="btn btn-primary" type="button">
+                        Primary
+                    </button>
+                    <button className="btn btn-secondary" type="button">
+                        Secondary
+                    </button>
+                    <br />
+                    <br />
+                    <button className="btn btn-default btn-sm" type="button">
+                        Small
+                    </button>
 
-                    <br /><br /><br />
+                    <br />
+                    <br />
+                    <br />
 
                     <h3>Forms</h3>
                     <form>
                         <div className="form-group">
-                            <label htmlFor="input-1">Form label <span className="danger">*</span></label>
+                            <label htmlFor="input1">
+                                Form label <span className="danger">*</span>
+                            </label>
                             <p className="label-extra">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <input type="text" id="input-1" placeholder="ie. some placeholder text" />
+                            <input type="text" id="input1" placeholder="ie. some placeholder text" />
                         </div>
                         <div className="form-group danger-group">
-                            <label htmlFor="input-2">Input with error <span className="danger">*</span></label>
+                            <label htmlFor="input-2">
+                                Input with error <span className="danger">*</span>
+                            </label>
                             <p className="label-extra">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <input type="text" id="input-2" />
                             <div className="help-text">Some help text or error message</div>
@@ -63,8 +84,12 @@ class Home extends Component {
                             <div className="form-checkbox">
                                 <input type="checkbox" id="checkbox" />
                                 <div>
-                                    <label htmlFor="checkbox">Do you agree with our terms and conditions? <span className="danger">*</span></label>
-                                    <p className="label-extra">View our terms and conditions document <a href="/">here</a>.</p>
+                                    <label htmlFor="checkbox">
+                                        Do you agree with our terms and conditions? <span className="danger">*</span>
+                                    </label>
+                                    <p className="label-extra">
+                                        View our terms and conditions document <a href="/">here</a>.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +114,9 @@ class Home extends Component {
                             <textarea name="" id="input-5" rows="5" />
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                            <button type="submit" className="btn btn-primary btn-block">
+                                Submit
+                            </button>
                         </div>
                     </form>
 
@@ -97,15 +124,24 @@ class Home extends Component {
 
                     <h3>Alert</h3>
                     <div className="alert">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam dicta velit quae placeat ex quasi iure possimus.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam
+                            dicta velit quae placeat ex quasi iure possimus.
+                        </p>
                         <span className="alert-badge">&times;</span>
                     </div>
                     <div className="alert alert-danger">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam dicta velit quae placeat ex quasi iure possimus.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam
+                            dicta velit quae placeat ex quasi iure possimus.
+                        </p>
                         <span className="alert-badge">!</span>
                     </div>
                     <div className="alert alert-success">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam dicta velit quae placeat ex quasi iure possimus.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id expedita, accusantium blanditiis, aut minima mollitia earum, nostrum nemo quibusdam repudiandae veniam ullam
+                            dicta velit quae placeat ex quasi iure possimus.
+                        </p>
                         <span className="alert-badge">&#x2713;</span>
                     </div>
 
@@ -122,16 +158,28 @@ class Home extends Component {
 
                     <h3>Stepper</h3>
                     <div className="stepper">
-                        <button className="completed">1</button>
-                        <button className="completed">2</button>
-                        <button disabled>3</button>
-                        <button disabled>4</button>
-                        <button disabled>5</button>
+                        <button className="completed" type="button">
+                            1
+                        </button>
+                        <button className="completed" type="button">
+                            2
+                        </button>
+                        <button disabled type="button">
+                            3
+                        </button>
+                        <button disabled type="button">
+                            4
+                        </button>
+                        <button disabled type="button">
+                            5
+                        </button>
                         <span className="progress" style={{ width: '35%' }} />
                     </div>
 
-                    <br /><br /><br /><br />
-
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </div>
                 <div className="col-xs-12 col-md-4">
                     <div className="card m-b-1">

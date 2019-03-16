@@ -4,7 +4,8 @@ import { PropTypes } from 'prop-types'
 
 class ScrollTop extends Component {
     componentDidUpdate(prevProps) {
-        if (this.props.location !== prevProps.location) {
+        const { location } = this.props
+        if (location !== prevProps.location) {
             window.scrollTo(0, 0)
         }
     }
@@ -15,11 +16,11 @@ class ScrollTop extends Component {
 }
 
 ScrollTop.propTypes = {
-    location: PropTypes.object
+    location: PropTypes.object,
 }
 
 ScrollTop.defaultProps = {
-    location: '/'
+    location: '/',
 }
 
 export default withRouter(ScrollTop)

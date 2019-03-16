@@ -7,10 +7,9 @@ import Footer from 'Components/footer'
 import Home from 'Views/home'
 import About from 'Views/about'
 import ScrollTop from 'Components/scrollTop'
-import StylesIgnored from '../styles/main.css'
+import '../styles/main.css'
 
 ReactGA.initialize('UA-00000000-0')
-
 const history = createHistory()
 history.listen((location) => {
     ReactGA.set({ page: location.pathname })

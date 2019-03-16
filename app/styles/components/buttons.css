@@ -1,66 +1,66 @@
 /* Buttons */
 
 button {
-	border: 0;
-	background: transparent;
-	outline: 0;
-	cursor: pointer;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
 
-	&[disabled] {
-		cursor: default;
-	}
+    &[disabled] {
+        cursor: default;
+    }
 }
 
 .btn {
-	display: inline-block;
-	border: 1px solid var(--gray);
-	border-radius: 100px;
-	background: white;
-	color: #bababa;
-	padding: .5rem 2.125rem;
-	margin-bottom: .5rem;
-	font-size: 0.875rem;
-	font-weight: 400;
-	cursor: pointer;
-	text-decoration: none;
-	font-family: var(--font-name);
+    display: inline-block;
+    border: 1px solid var(--gray);
+    border-radius: 100px;
+    background: white;
+    color: #bababa;
+    padding: 0.5rem 2.125rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-name);
 
-	&:hover {
-		opacity: .5;
-	}
+    &:hover {
+        opacity: 0.5;
+    }
 
-	&.btn-sm {
-		padding: .425rem 1.5rem;
-		font-size: 0.725rem;
-	}
+    &.btn-sm {
+        padding: 0.425rem 1.5rem;
+        font-size: 0.725rem;
+    }
 
-	&.btn-lg {
-		padding: 1rem 2rem;
-		font-size: 1.125rem;
-	}
+    &.btn-lg {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
 
-	&[disabled] {
-		opacity: .4;
-	}
+    &[disabled] {
+        opacity: 0.4;
+    }
 
-	& + .btn {
-		margin-left: 1rem;
-	}
+    & + .btn {
+        margin-left: 1rem;
+    }
 }
 
 .btn-primary {
-	border: 1px solid var(--primary);
-	background: var(--primary);
-	color: white;
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: white;
 }
 
 .btn-secondary {
-	border: 1px solid var(--primary);
-	color: var(--primary);
-	background: white;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: white;
 }
 
 .btn-block {
-	width: 100%;
-	margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }

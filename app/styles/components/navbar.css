@@ -1,16 +1,16 @@
 /* Navbar */
 .navbar {
-	margin-top: 2rem;
-	margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 
-	& h1 {
-		color: var(--primary);
-	}
+    & h1 {
+        color: var(--primary);
+    }
 }
 
 .nav {
-	& a {
-		display: inline-block;
-		margin-right: .5rem;
-	}
+    & a {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
 }
