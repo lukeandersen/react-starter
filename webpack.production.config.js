@@ -18,6 +18,7 @@ module.exports = {
             Helpers: path.resolve(__dirname, './app/helpers/'),
             Views: path.resolve(__dirname, './app/views/'),
             Components: path.resolve(__dirname, './app/components/'),
+            Config: path.resolve(__dirname, './app/config/'),
         },
     },
     module: {
@@ -26,15 +27,12 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
-                options: {
-                    presets: ['react', 'es2015', 'stage-2'],
-                },
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader?importLoaders=1', 'postcss-loader'],
+                    use: ['css-loader', 'postcss-loader'],
                 }),
             },
             {
