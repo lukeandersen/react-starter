@@ -1,5 +1,7 @@
 # React Starter
 
+Demo: https://react-starter-git-master.lukeandersen.now.sh
+
 ## Getting started
 
 Clone the project and run `npm i`
