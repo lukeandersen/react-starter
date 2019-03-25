@@ -5,10 +5,5 @@
       "src": "package.json",
       "use": "@now/static-build"
     }
-  ],
-  "routes": [
-    {"src": "^/dist/assets/(.*)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
-    {"src": "^/(.*).(css|js)", "headers": {"cache-control": "public,max-age=31536000,immutable"} },
-    {"src": "^/(.*).html", "headers": {"cache-control": "public,max-age=0,must-revalidate"} }
   ]
 }
