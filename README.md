@@ -1,6 +1,6 @@
 # React Starter
 
-Demo: https://react-starter-git-master.lukeandersen.now.sh
+Demo: https://react-starter.lukeandersen.now.sh
 
 ## Getting started
 
