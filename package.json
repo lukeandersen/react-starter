@@ -19,7 +19,7 @@
     "author": "Luke Andersen",
     "license": "ISC",
     "dependencies": {
-        "axios": "0.19.0",
+        "axios": "0.19.1",
         "classnames": "2.2.6",
         "express": "4.17.1",
         "flexboxgrid": "6.3.1",
