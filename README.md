@@ -26,6 +26,8 @@ For more info: https://github.com/webpack/file-loader
 
 Run `npm run build`
 
+To test the built app, `cd dist` then run `node server.js` and the built app will be available at `http://localhost:9001`
+
 ### Deploy
 
 If you choose to deploy to a static host like Netlify you're done. If you choose another host like Heroku you will need to make sure the host supports node environments then use the `npm run createServer` script which will install express as a dependency of the app. This will then make use if the node `server.js` file included in the repo to run the app. You may need to specify this as the way to start your server on some hosts like AWS, eg. `node server.js` but most know to look for a server.js or index.js in the root directory of the project.
